@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Générateur de quête</title>
+  <script>
+    let data = {};
+
+    // Charger le JSON
+    async function loadData() {
+      const response = await fetch("cadavre_exquis.json");
+      data = await response.json();
+    }
+
+    // Choisir un élément au hasard
+    function pickRandom(list) {
+      return list[Math.floor(Math.random() * list.length)];
+    }
+
+    // Générer le texte
+    function generateStory() {
+      if (!data["lieu fermé/bâtiment"]) {
+        alert("Les données ne sont pas encore chargées !");
+        return;
+      }
+
+      const lieu = pickRandom(data["lieu fermé/bâtiment"]);
+      const vaste = pickRandom(data["lieu plus vaste"]);
+      const quete = pickRandom(data["quête"]);
+      const commanditaire = pickRandom(data["commanditaire"]);
+      const raison = pickRandom(data["raison"]);
+      const consequences = pickRandom(data["conséquences"]);
+      const menace = pickRandom(data["menace approchante"]);
+      const perseverer = pickRandom(data["raison de persévérer"]);
+
+      const texte = `Vous êtes à l’entrée de ${lieu}, qui se trouve dans ${vaste}. 
+      Vous avez voyagé jusque là pour ${quete}, à la demande de ${commanditaire}. 
+      Mais ça tourne au vinaigre car ${raison} et c’est un problème inquiétant car ${consequences}. 
+      Pour couronner le tout, les signes annonciateurs de ${menace}. 
+      Impossible de renoncer car ${perseverer} : aussi faut-il aller de l’avant mais vous avez l’impression vague 
+      que ça va basculer dans un chaos périlleux, si vous ne vous remuez pas la carcasse au plus vite. 
+      <br><br><b>Que faites-vous ?</b>`;
+
+      document.getElementById("output").innerHTML = texte;
+    }
+
+    window.onload = loadData;
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background: #f7f7f7;
+    }
+    #container {
+      display: flex;
+      gap: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      background-color: #0077cc;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+    #output {
+      flex: 1;
+      padding: 15px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎲 Générateur de quête</h1>
+  <div id="container">
+    <button onclick="generateStory()">Générer</button>
+    <div id="output">Cliquez sur "Générer" pour obtenir une quête.</div>
+  </div>
+</body>
+</html>

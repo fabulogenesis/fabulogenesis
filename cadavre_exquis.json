@@ -1,0 +1,66 @@
+{
+  "lieu fermé/bâtiment": [
+    "un temple en ruines",
+    "une forteresse délabrée",
+    "une prison abandonnée",
+    "un laboratoire secret",
+    "une crypte ancienne",
+    "une tour de guet effondrée"
+  ],
+  "lieu plus vaste": [
+    "une jungle infestée de bêtes",
+    "un désert de cendres",
+    "les bas-fonds d’une cité immense",
+    "des montagnes enneigées",
+    "un archipel noyé de brume",
+    "une plaine ravagée par la guerre"
+  ],
+  "quête": [
+    "retrouver un artefact perdu",
+    "délivrer un prisonnier",
+    "sceller une brèche magique",
+    "voler un objet de valeur",
+    "collecter des informations interdites",
+    "convaincre un allié réticent"
+  ],
+  "commanditaire": [
+    "un roi mourant",
+    "une guilde de marchands",
+    "un culte religieux fanatique",
+    "un seigneur de guerre cruel",
+    "un esprit ancien",
+    "un parent disparu revenu soudainement"
+  ],
+  "raison": [
+    "vos guides se sont volatilisés",
+    "le passage est gardé par une force inattendue",
+    "les informations données étaient fausses",
+    "vous êtes trahis par un compagnon",
+    "le lieu est maudit et vous le ressentez",
+    "un ennemi vous attendait déjà sur place"
+  ],
+  "conséquences": [
+    "vous risquez de mourir sur place",
+    "le monde alentour pourrait sombrer dans le chaos",
+    "les innocents qui comptent sur vous seront perdus",
+    "vous serez accusés d’échec et déshonorés",
+    "un adversaire juré prendra l’avantage",
+    "la quête perdra tout son sens"
+  ],
+  "menace approchante": [
+    "la guerre totale",
+    "une tempête surnaturelle",
+    "une armée de morts-vivants",
+    "un dragon affamé",
+    "l’effondrement de la réalité",
+    "une épidémie incontrôlable"
+  ],
+  "raison de persévérer": [
+    "l’honneur vous l’impose",
+    "vous n’avez pas d’autre choix",
+    "vos proches en dépendent",
+    "une dette sacrée doit être payée",
+    "un serment ancien vous lie",
+    "vous espérez encore une rédemption"
+  ]
+}
