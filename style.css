@@ -24,8 +24,9 @@ button:hover {
     .btn-container { margin-bottom: 15px; }
 
     .result {
-      display: inline-block;
-      margin-left: 10px;
-      font-weight: bold;
-      color: darkblue;
+    display: inline-block;
+    position: absolute; /* position fixe */
+    left: 100px; /* distance fixe depuis le bord gauche */
+    font-weight: bold;
+    color: darkblue;
     }
