@@ -1,0 +1,66 @@
+{
+  "lieu_ferme": [
+    "station orbitale abandonnée",
+    "vaisseau spatial endommagé",
+    "laboratoire de biotechnologie",
+    "temple alien scellé",
+    "prison interstellaire",
+    "base militaire oubliée"
+  ],
+  "lieu_vaste": [
+    "les confins de la Diaspora",
+    "la jungle toxique d’Akiton",
+    "les souterrains de la Station Absalom",
+    "un astéroïde minier isolé",
+    "les profondeurs de l’océan de Vesk-3",
+    "les ruines d’une cité shirren"
+  ],
+  "quete": [
+    "retrouver une technologie perdue",
+    "récupérer une relique alien",
+    "sauver un équipage disparu",
+    "pirater une IA renégate",
+    "détruire une menace biomécanique",
+    "explorer un monde inconnu"
+  ],
+  "commanditaire": [
+    "un capitaine désespéré",
+    "une corporation draconienne",
+    "un mystique kasatha",
+    "un diplomate de la Station Absalom",
+    "un marchand ysoki louche",
+    "une faction de pirates stellaires"
+  ],
+  "raison": [
+    "le vaisseau subit une attaque soudaine",
+    "l’atmosphère est saturée de radiations",
+    "une trahison éclate au sein de l’équipage",
+    "l’intelligence artificielle devient incontrôlable",
+    "un portail dimensionnel instable s’ouvre",
+    "les systèmes de survie tombent en panne"
+  ],
+  "consequences": [
+    "tout l’équipage risque l’extinction",
+    "les mondes voisins seront contaminés",
+    "une guerre interstellaire pourrait éclater",
+    "le secret pourrait tomber aux mains ennemies",
+    "les ressources vitales seraient perdues",
+    "la Station Absalom serait menacée"
+  ],
+  "menace": [
+    "une invasion de drones autonomes",
+    "l’arrivée d’un essaim de monstres stellaires",
+    "le réveil d’une entité extraplanaire",
+    "l’émergence d’un culte sanglant",
+    "un champ gravitationnel incontrôlable",
+    "la propagation d’un virus techno-magique"
+  ],
+  "raison_impossible": [
+    "un serment inviolable vous lie à cette mission",
+    "un proche est directement menacé",
+    "vous êtes piégé par contrat légal",
+    "l’avenir de votre équipage en dépend",
+    "votre honneur de starfinder est en jeu",
+    "les crédits promis valent tous les risques"
+  ]
+}
