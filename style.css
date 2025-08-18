@@ -17,7 +17,7 @@ button {
   box-shadow: 2px 2px 6px rgba(0,0,0,0.3); /* ombre */
 }
 button:hover {
-  background-color: #1d0574; /* couleur plus foncée au survol */
+  background-color: #ba1212; /* couleur plus foncée au survol */
   box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
 }
 
