@@ -1,12 +1,14 @@
 
 
 .container {
-  margin: 0.5rem 0;
+  display: flex;
+  flex-wrap: wrap;       /* si tu veux plusieurs lignes */
+  gap: 0.1rem 0.3rem;    /* gap vertical | horizontal */
 }
 
 button {
   padding: 0.2rem 1rem;
-  margin-right: 0.3rem;
+  margin-right: 0;
   cursor: pointer;
   background-color: #243eb3;
   color: white;
