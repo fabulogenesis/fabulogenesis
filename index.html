@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Choix aléatoires</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .btn-container { margin-bottom: 15px; }
+    button {
+      padding: 6px 12px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .result {
+      display: inline-block;
+      margin-left: 10px;
+      font-weight: bold;
+      color: darkblue;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Générateur aléatoire</h1>
+  <div id="buttons"></div>
+
+  <script>
+    // Dictionnaire bouton → fichier JSON
+    const sources = {
+      "Fruit": "data/fruit.json",
+      "Couleur": "data/couleur.json",
+      "Animal": "data/animal.json",
+      "Vertu": "data/1.json"
+    };
+
+    const buttonsContainer = document.getElementById("buttons");
+
+    // Création dynamique des boutons
+    for (let [nom, fichier] of Object.entries(sources)) {
+      const div = document.createElement("div");
+      div.className = "btn-container";
+
+      const btn = document.createElement("button");
+      btn.textContent = nom;
+
+      const resultSpan = document.createElement("span");
+      resultSpan.className = "result";
+
+      btn.addEventListener("click", async () => {
+        try {
+          const response = await fetch(fichier);
+          const data = await response.json();
+          const choix = data[Math.floor(Math.random() * data.length)];
+          resultSpan.textContent = choix;
+        } catch (e) {
+          resultSpan.textContent = "⚠️ Erreur";
+          console.error(e);
+        }
+      });
+
+      div.appendChild(btn);
+      div.appendChild(resultSpan);
+      buttonsContainer.appendChild(div);
+    }
+  </script>
+
+</body>
+</html>
