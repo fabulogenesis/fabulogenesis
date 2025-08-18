@@ -48,7 +48,8 @@
 
       btn.addEventListener("click", async () => {
         try {
-          const response = await fetch(fichier);
+          
+          const response = await fetch(fichier + "?t=" + new Date().getTime());
           const data = await response.json();
           const choix = data[Math.floor(Math.random() * data.length)];
           resultSpan.textContent = choix;
