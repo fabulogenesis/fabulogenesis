@@ -8,7 +8,17 @@ body {
 }
 
 button {
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 1rem;
   margin-right: 1rem;
   cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3); /* ombre */
 }
+button:hover {
+  background-color: #45a049; /* couleur plus foncée au survol */
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+}
+
