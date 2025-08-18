@@ -1,5 +1,5 @@
 {
-  "lieu_ferme": [
+  "lieu fermé/bâtiment": [
     "station orbitale abandonnée",
     "vaisseau spatial endommagé",
     "laboratoire de biotechnologie",
@@ -7,7 +7,7 @@
     "prison interstellaire",
     "base militaire oubliée"
   ],
-  "lieu_vaste": [
+  "lieu plus vaste": [
     "les confins de la Diaspora",
     "la jungle toxique d’Akiton",
     "les souterrains de la Station Absalom",
@@ -15,7 +15,7 @@
     "les profondeurs de l’océan de Vesk-3",
     "les ruines d’une cité shirren"
   ],
-  "quete": [
+  "quête": [
     "retrouver une technologie perdue",
     "récupérer une relique alien",
     "sauver un équipage disparu",
@@ -39,7 +39,7 @@
     "un portail dimensionnel instable s’ouvre",
     "les systèmes de survie tombent en panne"
   ],
-  "consequences": [
+  "conséquences": [
     "tout l’équipage risque l’extinction",
     "les mondes voisins seront contaminés",
     "une guerre interstellaire pourrait éclater",
@@ -47,7 +47,7 @@
     "les ressources vitales seraient perdues",
     "la Station Absalom serait menacée"
   ],
-  "menace": [
+  "menace approchante": [
     "une invasion de drones autonomes",
     "l’arrivée d’un essaim de monstres stellaires",
     "le réveil d’une entité extraplanaire",
@@ -55,7 +55,7 @@
     "un champ gravitationnel incontrôlable",
     "la propagation d’un virus techno-magique"
   ],
-  "raison_impossible": [
+  "raison de persévérer": [
     "un serment inviolable vous lie à cette mission",
     "un proche est directement menacé",
     "vous êtes piégé par contrat légal",
