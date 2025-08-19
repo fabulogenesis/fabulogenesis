@@ -1,19 +1,60 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-  
 <head>
   <meta charset="UTF-8">
   <title>Choix aléatoires</title>
-  <link rel="stylesheet" href="style.css?t=1692380000">
-</head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+      background: #f7f7f7;
+    }
 
+    h1 {
+      margin-bottom: 30px;
+    }
 
+    #buttons {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    button {
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background: #0077cc;
+      color: white;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #005fa3;
+    }
+
+    #output {
+      margin-top: 40px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      min-height: 100px;
+    }
+  </style>
 </head>
 <body>
 
-  <h1>Générateur aléatoire</h1>
+  <h1>🎲 Générateur aléatoire</h1>
+
   <div id="buttons"></div>
+
+  <!-- Zone unique pour afficher le résultat -->
+  <div id="output">Cliquez sur un bouton pour obtenir un résultat.</div>
 
   <script>
     // Dictionnaire bouton → fichier JSON
@@ -40,34 +81,26 @@
     };
 
     const buttonsContainer = document.getElementById("buttons");
+    const output = document.getElementById("output");
 
     // Création dynamique des boutons
     for (let [nom, fichier] of Object.entries(sources)) {
-      const div = document.createElement("div");
-      div.className = "btn-container";
-
       const btn = document.createElement("button");
       btn.textContent = nom;
 
-      const resultSpan = document.createElement("span");
-      resultSpan.className = "result";
-
       btn.addEventListener("click", async () => {
         try {
-          
           const response = await fetch(fichier + "?t=" + new Date().getTime());
           const data = await response.json();
           const choix = data[Math.floor(Math.random() * data.length)];
-          resultSpan.textContent = choix;
+          output.innerHTML = `<span style="color:#0077cc">${nom}</span> → <b>${choix}</b>`;
         } catch (e) {
-          resultSpan.textContent = "⚠️ Erreur";
+          output.textContent = "⚠️ Erreur de chargement";
           console.error(e);
         }
       });
 
-      div.appendChild(btn);
-      div.appendChild(resultSpan);
-      buttonsContainer.appendChild(div);
+      buttonsContainer.appendChild(btn);
     }
   </script>
 
