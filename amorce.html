@@ -12,12 +12,13 @@ const jsonFiles = {
   "description_lieu": "data/description_lieu.json",
   "theme_fr": "data/theme_fr.json",
   "personnage": "data/personnage.json",
-  "personnalite": "data/personnalite.json",
+  "defaut": "data/defaut.json",
   "objectif": "data/objectif.json",
   "action_fr": "data/action_fr.json",
   "faction": "data/faction.json",
   "faction_move": "data/faction_move.json",
-  "nom": "data/nom.json"
+  "nom": "data/nom.json",
+  "defaut": "data/defaut.json"
 };
 
 // Charger tous les fichiers JSON
@@ -46,19 +47,19 @@ function generateStory() {
   const lieu = pickRandom(data.lieu);
   const nom = pickRandom(data.nom);
   const personnage = pickRandom(data.personnage);
-  const personnalite = pickRandom(data.personnalite);
+  const defaut = pickRandom(data.defaut);
   const theme_fr = pickRandom(data.theme_fr);
   const objectif = pickRandom(data.objectif);
   const description_lieu = pickRandom(data.description_lieu);
   const action_fr = pickRandom(data.action_fr);
 
   const personnage2 = pickRandom(data.personnage);
-  const personnalite2 = pickRandom(data.personnalite);
+  const defaut2 = pickRandom(data.defaut);
   const nom2 = pickRandom(data.nom);
   const objectif2 = pickRandom(data.objectif);
 
   const personnage3 = pickRandom(data.personnage);
-  const personnalite3 = pickRandom(data.personnalite);
+  const defaut3 = pickRandom(data.defaut);
   const objectif3 = pickRandom(data.objectif);
   const nom3 = pickRandom(data.nom);
 
@@ -68,9 +69,9 @@ function generateStory() {
   const texte = `Cette histoire commence ici : <b>${lieu}</b> - <b>${description_lieu}</b>.<br>
   Thème est : <b>${theme_fr}</b>.<br> Action en cours ou générale : <b>${action_fr}</b>.<br>
   Le Héros est en compagnie de trois personnages dont voici la description<br>
-  <b>${nom}</b> - ${personnage}, ${personnalite}, but : ${objectif}.<br>
-  <b>${nom2}</b> - ${personnage2}, ${personnalite2}, but : ${objectif2}.<br>
-  <b>${nom3}</b> - ${personnage3}, ${personnalite3}, but : ${objectif3}.<br>
+  <b>${nom}</b> - ${personnage}, ${defaut}, but : ${objectif}.<br>
+  <b>${nom2}</b> - ${personnage2}, ${defaut2}, but : ${objectif2}.<br>
+  <b>${nom3}</b> - ${personnage3}, ${defaut3}, but : ${objectif3}.<br>
   Faction - <b>${faction}</b><br>    ==>> action en cours :<b>${faction_move}</b>
   `;
 
