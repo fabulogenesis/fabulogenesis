@@ -9,8 +9,12 @@ let data = {}; // objet global pour stocker les données
 // Liste des fichiers JSON et la clé qu'ils représentent
 const jsonFiles = {
   "lieu": "data/lieu_sauvage.json",
+  "description_lieu": "data/description_lieu.json",
+  "theme_fr": "data/theme_fr.json",
   "personnage": "data/personnage.json",
   "personnalite": "data/personnalite.json",
+  "objectif": "data/objectif.json",
+  "action_fr": "data/action_fr.json"
 };
 
 // Charger tous les fichiers JSON
@@ -39,10 +43,14 @@ function generateStory() {
   const lieu = pickRandom(data.lieu);
   const personnage = pickRandom(data.personnage);
   const personnalite = pickRandom(data.personnalite);
- 
+  const theme_fr = pickRandom(data.theme_fr);
+  const objectif = pickRandom(data.objectif);
+  const description_lieu = pickRandom(data.description_lieu);
+  const action_fr = pickRandom(data.action_fr);
 
-  const texte = `Le Héros est <b>${personnage}</b>, et se trouve dans <b>${lieu}</b>. 
-Voilà sa personnalité <b>${personnalite}</b>.`;
+  const texte = `Cette histoire commence ici : <b>${lieu}</b> - <b>${description_lieu}</b>.
+  Son thème est : <b>${theme_fr}</b>. L'action en cours ou générale : <b>${action_fr}</b>.
+  Le Héros est en compagnie de <b>${personnage}</b>, dont la personnalité est <b>${personnalite}</b> et l'objectif est <b>${objectif}</b>.`;
 
   document.getElementById("output").innerHTML = texte;
 }
