@@ -68,14 +68,18 @@ function generateStory() {
   const factionName = pickRandom(Object.keys(data.factions));  // "Organisations ambitieuses", "Forces Planaires", etc.
   const factionBut = pickRandom(data.factions[factionName].buts);     // un but au hasard
   const factionAction = pickRandom(data.factions[factionName].actions); // une action au hasard
+  const factionAction2 = pickRandom(data.factions[factionName].actions);
 
   const texte = `Cette histoire commence ici : <b>${lieu}</b> - <b>${description_lieu}</b>.<br>
   ${action_fr} / ${theme_fr}.<br>
   Le Héros est en compagnie de
   <b>${nom}</b>, un ${personnage} (${defaut}) dont le but est : ${objectif}.<br>
 
-  Une faction active est de type : <b>${factionName}</b> et dont la nature précise est :${factionBut}.<br>
-  Et voici ce qu'elle entreprend actuellement :${factionAction}<br>.
+  Une faction active est de type : <b>${factionName}</b><br> 
+  Sa nature :${factionBut}.<br>
+  Ce qu'elle entreprend actuellement :<br>
+  >> ${factionAction}<br>
+  >> ${factionAction2}<br>.
   `;
 
   document.getElementById("output").innerHTML = texte;
