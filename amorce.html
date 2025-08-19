@@ -14,7 +14,9 @@ const jsonFiles = {
   "personnage": "data/personnage.json",
   "personnalite": "data/personnalite.json",
   "objectif": "data/objectif.json",
-  "action_fr": "data/action_fr.json"
+  "action_fr": "data/action_fr.json",
+  "faction": "data/faction.json",
+  "faction_move": "data/faction_move.json"
 };
 
 // Charger tous les fichiers JSON
@@ -56,12 +58,17 @@ function generateStory() {
   const personnalite3 = pickRandom(data.personnalite);
   const objectif3 = pickRandom(data.objectif);
 
+  const faction = pickRandom(data.faction);
+  const faction_move = pickRandom(data.faction_move);
+
   const texte = `Cette histoire commence ici : <b>${lieu}</b> - <b>${description_lieu}</b>.<b>
   Thème est : <b>${theme_fr}</b>.<br> Action en cours ou générale : <b>${action_fr}</b>.<br>
   Le Héros est en compagnie de trois personnages dont voici la description<br>
   Quick - <b>${personnage}</b>, <b>${personnalite}</b>, but <b>${objectif}</b>.<br>
   Trash - <b>${personnage2}</b>, <b>${personnalite2}</b>, but <b>${objectif2}</b>.<br>
-  Bulk - <b>${personnage3}</b>, <b>${personnalite3}</b>, but <b>${objectif3}</b>.`;
+  Bulk - <b>${personnage3}</b>, <b>${personnalite3}</b>, but <b>${objectif3}</b>.<br>
+  Faction - <b>${faction}</b>, action en cours :<b>${faction_move}</b>
+  `;
 
   document.getElementById("output").innerHTML = texte;
 }
