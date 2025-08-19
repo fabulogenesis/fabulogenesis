@@ -38,7 +38,7 @@ function generateStory() {
 
   const lieu = pickRandom(data.lieu);
   const personnage = pickRandom(data.personnage);
-  const personnalité = pickRandom(data.personnalite);
+  const personnalite = pickRandom(data.personnalite);
  
 
   const texte = `Le Héros est <b>${personnage}</b>, et se trouve dans <b>${lieu}</b>. 
@@ -83,10 +83,10 @@ button:hover {
 </style>
 </head>
 <body>
-<h1>🎲 Générateur de quête</h1>
+<h1>🎲 Générateur d'amorce</h1>
 <div id="container">
   <button onclick="generateStory()">Générer</button>
-  <div id="output">Cliquez sur "Générer" pour obtenir une quête.</div>
+  <div id="output">Cliquez sur "Générer" pour obtenir une amorce.</div>
 </div>
 </body>
 </html>
