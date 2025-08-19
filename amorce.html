@@ -57,11 +57,11 @@ function generateStory() {
   const objectif3 = pickRandom(data.objectif);
 
   const texte = `Cette histoire commence ici : <b>${lieu}</b> - <b>${description_lieu}</b>.
-  Son thème est : <b>${theme_fr}</b>.<br> L'action en cours ou générale : <b>${action_fr}</b>.<br>
+  Thème est : <b>${theme_fr}</b>.<br> Action en cours ou générale : <b>${action_fr}</b>.<br>
   Le Héros est en compagnie de trois personnages dont voici la description<br>
-  Jean - <b>${personnage}</b>, <b>${personnalite}</b>, but <b>${objectif}</b>.<br>
-  Jean - <b>${personnage2}</b>, <b>${personnalite2}</b>, but <b>${objectif2}</b>.<br>
-  Jean - <b>${personnage3}</b>, <b>${personnalite3}</b>, but <b>${objectif3}</b>.`;
+  Quick - <b>${personnage}</b>, <b>${personnalite}</b>, but <b>${objectif}</b>.<br>
+  Trash - <b>${personnage2}</b>, <b>${personnalite2}</b>, but <b>${objectif2}</b>.<br>
+  Bulk - <b>${personnage3}</b>, <b>${personnalite3}</b>, but <b>${objectif3}</b>.`;
 
   document.getElementById("output").innerHTML = texte;
 }
