@@ -83,8 +83,11 @@
     const buttonsContainer = document.getElementById("buttons");
     const output = document.getElementById("output");
 
+    // Trier les entrées par nom de bouton
+    const sortedEntries = Object.entries(sources).sort((a, b) => a[0].localeCompare(b[0], 'fr'));
+
     // Création dynamique des boutons
-    for (let [nom, fichier] of Object.entries(sources)) {
+    for (let [nom, fichier] of sortedEntries) {
       const btn = document.createElement("button");
       btn.textContent = nom;
 
