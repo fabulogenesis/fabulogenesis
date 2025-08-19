@@ -16,6 +16,7 @@ const jsonFiles = {
   "objectif": "data/objectif.json",
   "action_fr": "data/action_fr.json",
   "faction": "data/faction.json",
+  "factions": "data/factions.json",
   "faction_move": "data/faction_move.json",
   "nom": "data/nom.json",
   "defaut": "data/defaut.json"
@@ -63,8 +64,10 @@ function generateStory() {
   const objectif3 = pickRandom(data.objectif);
   const nom3 = pickRandom(data.nom);
 
-  const faction = pickRandom(data.faction);
-  const faction_move = pickRandom(data.faction_move);
+// Choisir une faction au hasard dans le JSON factions
+  const factionName = pickRandom(Object.keys(data.factions));  // "Organisations ambitieuses", "Forces Planaires", etc.
+  const factionBut = pickRandom(data.factions[factionName].buts);     // un but au hasard
+  const factionAction = pickRandom(data.factions[factionName].actions); // une action au hasard
 
   const texte = `Cette histoire commence ici : <b>${lieu}</b> - <b>${description_lieu}</b>.<br>
   Thème est : <b>${theme_fr}</b>.<br> Action en cours ou générale : <b>${action_fr}</b>.<br>
@@ -72,7 +75,8 @@ function generateStory() {
   <b>${nom}</b> - ${personnage} (${defaut}) - but : ${objectif}.<br>
   <b>${nom2}</b> - ${personnage2} (${defaut2}) - but : ${objectif2}.<br>
   <b>${nom3}</b> - ${personnage3} (${defaut3}) - but : ${objectif3}.<br>
-  Faction - <b>${faction}</b><br>     =>> action en cours    :${faction_move}<br>
+  Faction - <b>${factionName}</b><br>     But:${factionBut}<br>
+       Action (en cours):${factionAction}<br>
   `;
 
   document.getElementById("output").innerHTML = texte;

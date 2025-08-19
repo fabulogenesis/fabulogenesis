@@ -1,0 +1,101 @@
+{
+  "Organisations ambitieuses": {
+    "buts": [
+      "Bienfaiteurs égarés (faire le « bien » quoi qu’il en coûte)",
+      "Guilde de voleurs (dérober par subterfuge)",
+      "Culte (infiltrer)",
+      "Organisation religieuse (établir et suivre la doctrine)",
+      "Gouvernement corrompu (maintien du statu quo)",
+      "Cabale (corrompre les puissants, se développer)"
+    ],
+    "actions": [
+      "Attaquer quelqu’un par des moyens furtifs (enlèvements, etc.)",
+      "Attaquer quelqu’un directement (avec un gang ou agresseur unique)",
+      "Affilier ou acheter quelqu’un d’important (un allié, peut-être)",
+      "Influencer une institution puissante (changer une loi, manipuler la doctrine)",
+      "Établir une nouvelle règle (dans l’organisation)",
+      "Revendiquer un territoire ou des ressources",
+      "Négocier un accord",
+      "Surveiller un ennemi potentiel"
+    ]
+  },
+  "Forces Planaires": {
+    "buts": [
+      "Dieu (rassembler des fidèles)",
+      "Prince démon (ouvrir les portes de l’enfer)",
+      "Seigneur élémentaire (atomiser la création en particules primordiales)",
+      "Forces du chaos (détruire tout semblant d’ordre)",
+      "Chœur angélique (juger)",
+      "Instrument de la loi (éliminer le désordre)"
+    ],
+    "actions": [
+      "Détourner une organisation (corrompre ou infiltrer grâce à l’influence)",
+      "Inspirer des rêves prémonitoires",
+      "Infliger une malédiction à un adversaire",
+      "Extorquer une promesse en échange d’un bienfait",
+      "Attaquer indirectement ou au moyen d’intermédiaires",
+      "Attaquer directement lors d’une conjonction astrale favorable (rare)",
+      "Révéler une vérité, souhaitée ou non"
+    ]
+  },
+  "Ennemis occultes": {
+    "buts": [
+      "Seigneur des morts-vivants (rechercher l’immortalité absolue)",
+      "Mage mégalomane (s’accaparer le pouvoir magique)",
+      "Artefact intelligent (trouver un porteur digne de lui)",
+      "Ancienne malédiction (prendre quelqu’un au piège)",
+      "L’élu (accomplir ou refuser son destin)",
+      "Dragon (Amasser or et bijoux, protéger son magot)"
+    ],
+    "actions": [
+      "Apprendre des connaissances interdites",
+      "Jeter un sort à travers le temps et l’espace",
+      "Attaquer un ennemi par magie, directement ou non",
+      "Espionner quelqu’un avec un sort de divination",
+      "Recruter un disciple ou un larbin",
+      "Tenter quelqu’un avec des promesses",
+      "Exiger un sacrifice"
+    ]
+  },
+  "Hordes": {
+    "buts": [
+      "Barbares en maraude (augmenter leurs forces, soumettre leurs ennemis)",
+      "Vermine humanoïde (se reproduire, croître et ravager)",
+      "Créatures souterraines (défendre leur repère des intrus)",
+      "Invasion de morts-vivants (se propager)"
+    ],
+    "actions": [
+      "Attaquer un bastion de civilisation",
+      "Succomber au désordre interne",
+      "Changer brusquement de direction",
+      "Submerger les plus faibles",
+      "Accomplir une démonstration de force",
+      "Abandonner un ancien campement, en trouver un nouveau",
+      "Croître en taille par reproduction ou par conquête",
+      "Désigner un champion",
+      "Déclarer la guerre et partir en campagne aussitôt, sans hésitation ni concertation"
+    ]
+  },
+  "Lieux maudits": {
+    "buts": [
+      "Tour abandonnée (attirer les esprits faibles)",
+      "Terres impies (répandre le mal)",
+      "Vortex élémentaire (croître, déchirer le tissu de la réalité)",
+      "Sombre portail (vomir des démons)",
+      "Terres maléfiques (corrompre ou consumer la vie)",
+      "Lieu de puissance (être contrôlé ou dominé)"
+    ],
+    "actions": [
+      "Vomir un monstre mineur",
+      "Se répandre aux alentours",
+      "Attirer quelqu’un par ruse",
+      "Croître en intensité ou en profondeur",
+      "Causer un effet persistant sur un habitant ou un visiteur",
+      "Cacher quelque chose",
+      "Offrir la puissance",
+      "Atténuer la magie ou accroître ses effets",
+      "Brouiller ou obscurcir la vérité",
+      "Corrompre une loi naturelle"
+    ]
+  }
+}
