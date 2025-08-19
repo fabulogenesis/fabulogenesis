@@ -10,11 +10,7 @@
       margin: 20px;
       background: #f7f7f7;
     }
-
-    h1 {
-      margin-bottom: 30px;
-    }
-
+    h1 { margin-bottom: 30px; }
     #buttons {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -22,7 +18,6 @@
       max-width: 1000px;
       margin: 0 auto;
     }
-
     button {
       padding: 12px;
       font-size: 16px;
@@ -33,11 +28,7 @@
       cursor: pointer;
       transition: background 0.2s;
     }
-
-    button:hover {
-      background: #7a0606;
-    }
-
+    button:hover { background: #005599; }
     #output {
       margin-top: 40px;
       font-size: 28px;
@@ -49,67 +40,86 @@
 </head>
 <body>
 
-  <h1>🎲 Générateur aléatoire</h1>
+<h1>🎲 Générateur aléatoire</h1>
 
-  <div id="buttons"></div>
+<div id="buttons"></div>
+<div id="output">Cliquez sur un bouton pour obtenir un résultat.</div>
 
-  <!-- Zone unique pour afficher le résultat -->
-  <div id="output">Cliquez sur un bouton pour obtenir un résultat.</div>
+<script>
+const english = {
+  "Action": "data/action.json",
+  "Action 2": "data/action2.json",
+  "Descriptor": "data/descriptor.json",
+  "Descriptor 2": "data/descriptor2.json",
+  "Défaut": "data/defaut.json",
+  "Vertu": "data/1.json",
+  "Conversation": "data/conversation.json",
+  "Talk": "data/talk.json",
+  "Object": "data/object.json",
+  "Character": "data/character.json",
+  "Location": "data/location.json",
+  "Guild": "data/guild.json",
+  "Dominion": "data/dominion.json",
+  "Theme": "data/theme.json",
+  "Focus": "data/focus.json",
+  "Thème (fr)": "data/theme_fr.json",
+  "Objectif (fr)": "data/objectif.json",
+  "Action (fr)": "data/action_fr.json",
+  "Personnalité (fr)": "data/personnalite.json",
+  "Lieux sauvages": "data/lieu_sauvage.json",
+  "Description lieu": "data/description_lieu.json",
+  "Personnage": "data/personnage.json",
+  "But": "data/but.json"
+};
 
-  <script>
-    // Dictionnaire bouton → fichier JSON
-    const sources = {
-      "Action": "data/action.json",
-      "Action 2": "data/action2.json",
-      "Descriptor": "data/descriptor.json",
-      "Descriptor 2": "data/descriptor2.json",
-      "Défaut": "data/defaut.json",
-      "Vertu": "data/1.json",
-      "Conversation": "data/conversation.json",
-      "Talk": "data/talk.json",
-      "Object": "data/object.json",
-      "Character": "data/character.json",
-      "Location": "data/location.json",
-      "Guild": "data/guild.json",
-      "Dominion": "data/dominion.json",
-      "Theme": "data/theme.json",
-      "Focus": "data/focus.json",
-      "Thème (fr)": "data/theme_fr.json",
-      "Objectif (fr)": "data/objectif.json",
-      "Action (fr)": "data/action_fr.json",
-      "Personnalité (fr)": "data/personnalite.json",
-      "Lieux sauvages": "data/lieu_sauvage.json",
-      "Description lieu": "data/description_lieu.json",
-      "Personnage": "data/personnage.json",
-      "But": "data/but.json"
-    };
+const french = {   
+  "Défaut": "data/defaut.json",
+  "Vertu": "data/1.json",
+  "Thème (fr)": "data/theme_fr.json",
+  "Objectif (fr)": "data/objectif.json",
+  "Action (fr)": "data/action_fr.json",
+  "Personnalité (fr)": "data/personnalite.json",
+  "Lieux sauvages": "data/lieu_sauvage.json",
+  "Description lieu": "data/description_lieu.json",
+  "Personnage": "data/personnage.json",
+  "But": "data/but.json"
+};
 
-    const buttonsContainer = document.getElementById("buttons");
-    const output = document.getElementById("output");
+const buttonsContainer = document.getElementById("buttons");
+const output = document.getElementById("output");
 
-    // Trier les entrées par nom de bouton
-    const sortedEntries = Object.entries(sources).sort((a, b) => a[0].localeCompare(b[0], 'fr'));
+// Crée les boutons de langue au départ
+["French", "English"].forEach(lang => {
+  const btn = document.createElement("button");
+  btn.textContent = lang;
+  btn.addEventListener("click", () => {
+    buttonsContainer.innerHTML = ""; // supprime les boutons de langue
+    createCategoryButtons(lang === "French" ? french : english);
+  });
+  buttonsContainer.appendChild(btn);
+});
 
-    // Création dynamique des boutons
-    for (let [nom, fichier] of sortedEntries) {
-      const btn = document.createElement("button");
-      btn.textContent = nom;
-
-      btn.addEventListener("click", async () => {
-        try {
-          const response = await fetch(fichier + "?t=" + new Date().getTime());
-          const data = await response.json();
-          const choix = data[Math.floor(Math.random() * data.length)];
-          output.innerHTML = `<span style="color:#0077cc">${nom}</span> → <b>${choix}</b>`;
-        } catch (e) {
-          output.textContent = "⚠️ Erreur de chargement";
-          console.error(e);
-        }
-      });
-
-      buttonsContainer.appendChild(btn);
-    }
-  </script>
+// Fonction pour créer les boutons selon le dictionnaire choisi
+function createCategoryButtons(dict) {
+  const entries = Object.entries(dict).sort((a, b) => a[0].localeCompare(b[0], 'fr'));
+  entries.forEach(([name, file]) => {
+    const btn = document.createElement("button");
+    btn.textContent = name;
+    btn.addEventListener("click", async () => {
+      try {
+        const response = await fetch(file + "?t=" + new Date().getTime());
+        const data = await response.json();
+        const choix = data[Math.floor(Math.random() * data.length)];
+        output.innerHTML = `<span style="color:#0077cc">${name}</span> → <b>${choix}</b>`;
+      } catch (e) {
+        output.textContent = "⚠️ Erreur de chargement";
+        console.error(e);
+      }
+    });
+    buttonsContainer.appendChild(btn);
+  });
+}
+</script>
 
 </body>
 </html>
